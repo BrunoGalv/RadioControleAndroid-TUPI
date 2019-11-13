@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="2dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginBottom="6dp"
+    card_view:cardElevation="4dp"
+    card_view:cardMaxElevation="6dp"
+    card_view:cardBackgroundColor="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/templateTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoUsuario1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/nomeUsuario1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempoPublicacao1"
+                android:layout_below="@id/nomeUsuario1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_vertical"
+                android:textColor="#7f7f7f"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textoPublicacao1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fotoUsuario1"
+                android:layout_marginTop="5dp"
+                android:textColor="#262626"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/templateImagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoUsuario2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/nomeUsuario2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempoPublicacao2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/nomeUsuario2"
+                android:layout_marginLeft="50dp"
+                android:gravity="center_vertical"
+                android:textColor="#7f7f7f"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textoPublicacao2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fotoUsuario2"
+                android:layout_marginTop="5dp"
+                android:textColor="#262626"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/imagemPublicacao"
+                android:layout_below="@id/textoPublicacao2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxHeight="245dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:adjustViewBounds="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/templateAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoUsuario3"
+                android:layout_width="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/nomeUsuario3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="70dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/audioPublicacao"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/tempoPublicacao3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/nomeUsuario3"
+                android:layout_marginStart="70dp"
+                android:gravity="center_vertical"
+                android:textColor="#7f7f7f"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/video_control"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@color/colorPrimary"
+                android:layout_below="@+id/fotoUsuario3"
+                android:layout_marginTop="5dp">
+
+
+                <ImageButton
+                    android:id="@+id/btnPlayPauseAudio"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_action_playback_play" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="50dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb" />
+
+                <TextView
+                    android:id="@+id/tempoAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/btnPlayPauseAudio"-->
+                    <!--android:layout_width="40dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:background="@null"-->
+                    <!--android:padding="0dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--app:srcCompat="@drawable/ic_play_white" />-->
+
+                <!--<ProgressBar-->
+                    <!--android:id="@+id/loadingIcon"-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:indeterminate="true"-->
+                    <!--android:visibility="gone"/>-->
+
+                <!--<SeekBar-->
+                    <!--android:id="@+id/progressBarAudio"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="45dp"-->
+                    <!--android:layout_marginRight="45dp"-->
+                    <!--android:max="100"-->
+                    <!--android:maxHeight="10dp"-->
+                    <!--android:minHeight="10dp"-->
+                    <!--android:progress="0"-->
+                    <!--android:progressDrawable="@drawable/seekbar_style"-->
+                    <!--android:splitTrack="false"-->
+                    <!--android:thumb="@drawable/custom_thumb" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tempoAudio"-->
+                    <!--android:layout_width="40dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_margin="5dp"-->
+                    <!--android:gravity="left"-->
+                    <!--android:text="00:00"-->
+                    <!--android:textColor="@android:color/white" />-->
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

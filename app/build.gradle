@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "br.com.devmaker.rbn"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 4
+        versionName "4.0"
+        testInstrumentationRunner "android.support.abrirTelaDesejada.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    repositories {
+        mavenCentral()
+        maven { url 'https://maven.google.com' }
+        // Ampiri SDK repository
+        maven { url "http://ampiri.bintray.com/maven" }
+        maven { url "https://s3.amazonaws.com/avocarrot-android-builds/dist" }
+    }
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+    implementation 'com.android.support:mediarouter-v7:27.1.1'
+    implementation 'com.android.support:palette-v7:27.1.1'
+    implementation 'com.sothree.slidinguppanel:library:3.3.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'org.jsoup:jsoup:1.7.2'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation('com.squareup.retrofit2:converter-simplexml:2.0.0') {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.2.0'
+    implementation 'com.amazonaws:aws-android-sdk-core:2.12.4'
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.12.4'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.12.4'
+    implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.12.4'
+    implementation 'com.amazonaws:aws-android-sdk-apigateway-core:2.12.4'
+    implementation 'com.amazonaws:aws-android-sdk-mobileanalytics:2.12.4'
+    implementation 'com.amazonaws:aws-android-sdk-ddb:2.12.4'
+    implementation 'com.amazonaws:aws-android-sdk-ddb-document:2.12.4'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.9.0'
+    implementation 'com.google.android.exoplayer:exoplayer:2.9.0'
+    implementation 'com.aurelhubert:ahbottomnavigation:2.0.4'
+    implementation 'br.com.jansenfelipe:androidmask:1.0.1'
+    implementation 'com.prof.rssparser:rssparser:1.4.4'
+    implementation 'com.google.android.gms:play-services-ads:17.1.3'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+    implementation 'com.google.firebase:firebase-analytics:16.3.0'
+
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+apply plugin: 'com.google.gms.google-services'

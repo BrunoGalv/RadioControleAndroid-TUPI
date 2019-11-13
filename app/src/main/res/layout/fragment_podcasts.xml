@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.devmaker.rcapp.rcbncampinas.fragment.MuralFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SearchView
+        android:id="@+id/action_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_search"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottombaritem_first"
+        android:icon="@drawable/ic_home_white"
+        android:title="Início"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/bottombaritem_second"
+        android:icon="@drawable/ic_newspaper_white"
+        android:title="Notícias"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/bottombaritem_third"
+        android:icon="@drawable/ic_calendar_clock_white"
+        android:title="Programas"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/bottombaritem_fourth"
+        android:icon="@drawable/tupimais"
+        android:title="Tupi + / Podcasts"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/bottombaritem_fifth"
+        android:icon="@drawable/ic_more_horiz"
+        android:title="Mais"
+        app:showAsAction="ifRoom"/>
+
+</menu>

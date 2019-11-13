@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PodcastPlayer">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTopBarPodcastPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="serif"
+            android:text="@string/nav_item_podcasts"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLayoutTopBarPodcastPlayer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast"
+                android:background="@color/colorPrimary">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control2"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast2"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast2"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control3"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast3"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast3"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast4"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control4"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast4"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast4"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast5"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control5"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast5"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast5"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast6"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control5"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control6"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast6"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast6"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast7"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control6"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control7"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast7"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast7"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast8"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control7"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control8"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast8"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast8"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast9"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control8"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/podcast_control10"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast10"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast10"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/dataPublicacaoPodcast10"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/podcast_control9"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="serif"
+                android:gravity="center_vertical"
+                android:text="Publicado no dia 29/06/2017"
+                android:textAlignment="center"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/podcast_control9"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_below="@id/dataPublicacaoPodcast9"
+                android:background="@color/colorPrimary"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/btnPlayPausePodcast9"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:padding="0dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_play_circle_outline_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/loadingIcon9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <SeekBar
+                    android:id="@+id/progressBarPodcast9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="45dp"
+                    android:max="100"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_style"
+                    android:progressTint="@color/textColorPrimaryBlack"
+                    android:splitTrack="false"
+                    android:thumb="@drawable/custom_thumb"
+                    android:thumbTint="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tempoAudioPodcast9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+
+                    android:gravity="left"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

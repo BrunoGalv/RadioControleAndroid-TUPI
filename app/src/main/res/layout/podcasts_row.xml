@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    card_view:cardBackgroundColor="#fff"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="6dp"
+    card_view:cardMaxElevation="8dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPodcastRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tituloPodcast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="serif"
+            android:text="Podcast 01"
+            android:textAlignment="center"
+            android:textColor="#262626"
+            android:textSize="18sp"
+            android:typeface="serif" />
+
+
+        <TextView
+            android:id="@+id/dataPublicacaoPodcast11"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:text="Publicado no dia 29/06/2017"
+            android:textAlignment="textEnd"
+            android:textColor="#7f7f7f"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

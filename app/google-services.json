@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "590599109902",
+    "firebase_url": "https://teste-e97c8.firebaseio.com",
+    "project_id": "teste-e97c8",
+    "storage_bucket": "teste-e97c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590599109902:android:bb15c47500fbe709",
+        "android_client_info": {
+          "package_name": "br.com.devmaker.rbn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590599109902-0udd4i4cd1jbgo8miq6esr4mpejtsq1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdjcKVo292rE96YCdzH8uibjsT5br7Mhs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590599109902:android:a67988578b2dab5d",
+        "android_client_info": {
+          "package_name": "com.realvibe.teste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590599109902-0udd4i4cd1jbgo8miq6esr4mpejtsq1u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdjcKVo292rE96YCdzH8uibjsT5br7Mhs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
